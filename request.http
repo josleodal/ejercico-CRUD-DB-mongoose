@@ -1,0 +1,27 @@
+### Crear una tarea ###
+POST http://localhost:8080/tasks/create
+Content-Type: application/json
+
+{
+  "title": "Hacer la tarea"
+}
+
+### Obtener todas las tareas ###
+GET http://localhost:8080/tasks
+
+### Obtener una tarea por ID ###
+GET http://localhost:8080/tasks/id/65cd1077ffe2eb170d7c3744
+
+### Marcar una tarea como completada ###
+PUT http://localhost:8080/tasks/markAsCompleted/65cd1077ffe2eb170d7c3744
+
+### Actualizar el título de una tarea por ID ###
+PUT http://localhost:8080/tasks/id/65cd1077ffe2eb170d7c3744
+Content-Type: application/json
+
+{
+  "title": "Tarea actualizada"
+}
+
+### Eliminar una tarea por ID ###
+DELETE http://localhost:8080/tasks/id/65cd1077ffe2eb170d7c3744
